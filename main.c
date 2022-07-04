@@ -6,7 +6,7 @@
 /*   By: pmethira <pmethira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:04:55 by pmethira          #+#    #+#             */
-/*   Updated: 2022/07/04 19:07:28 by pmethira         ###   ########.fr       */
+/*   Updated: 2022/07/04 22:35:40 by pmethira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,8 @@ int draw_line(t_data *fdf, int beginX, int beginY, int endX, int endY, int color
 	pixels = sqrt((deltaX * deltaX) + (deltaY * deltaY));
 	deltaX /= pixels;
 	deltaY /= pixels;
-	colors = (unsigned int*)color;
+	// printf("pixel = %d delX =%.2f delY =%.2f pix X=%.2f pix Y=%.2f\n", pixels, deltaX, deltaY, pixelX, pixelY);
+	color = 0x00FF0000;
 	while (pixels)
 	{
 		my_mlx_pixel_put(fdf, pixelX, pixelY, color);
